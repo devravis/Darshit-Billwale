@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Container } from 'react-bootstrap';
+import { Col, Row, Container, Form } from 'react-bootstrap';
 import Slider from 'react-slick';
 
 const settings = {
@@ -11,129 +11,24 @@ const settings = {
     arrows: false
 };
 
-const plan = [
-    {
-        name: 'Software Uses',
-        demo: 'Bill + Inventory',
-        silver: 'Only Billing',
-        golden: 'Bill + Inventory',
-        platinum: 'Bill + Inventory',
-        diamond: 'Bill + Inventory',
-    },
-    {
-        name: 'Software No of staff User',
-        demo: '1 User ',
-        silver: '2 User ',
-        golden: '3 User ',
-        platinum: '3 User ',
-        diamond: 'Unlimited ',
-    },
-    {
-        name: 'Access to Billwale',
-        demo: 'Android & Web',
-        silver: 'Android , Web & IOS',
-        golden: 'Android , Web & IOS',
-        platinum: 'Android , Web & IOS',
-        diamond: 'Android , Web & IOS ',
-    },
-    {
-        name: 'Generate E-Way Bill',
-        demo: 'NO',
-        silver: 'NO',
-        golden: 'NO',
-        platinum: 'Unlimited',
-        diamond: 'Unlimited',
-    },
-    {
-        name: 'Generate E-Way Invoice',
-        demo: 'NO',
-        silver: 'NO',
-        golden: 'NO',
-        platinum: 'NO',
-        diamond: 'Available to add on request',
-    },
-    {
-        name: 'Generate & Print Pincode',
-        demo: 'NO',
-        silver: 'NO',
-        golden: 'NO',
-        platinum: 'Yes',
-        diamond: 'Yes',
-    },
-    {
-        name: 'SMS Marketing',
-        demo: 'NO',
-        silver: 'NO',
-        golden: '500 SMS (Per Year)',
-        platinum: '1000 SMS (Per Year)',
-        diamond: '2000 SMS (Per Year)',
-    },
-    {
-        name: 'Access to Customer Support',
-        demo: 'Call & Chat Support ',
-        silver: 'Call & Chat Support',
-        golden: 'Call & Chat Support',
-        platinum: 'Priority Call & Chat Support',
-        diamond: 'Priority Call & Chat Support',
-    },
-    {
-        name: 'Remove Billwale Branding From Invoice & Greeting',
-        demo: 'NO',
-        silver: 'Yes',
-        golden: 'Yes',
-        platinum: 'Yes',
-        diamond: 'Yes',
-    },
-    {
-        name: 'Use Advance GST themes for Bills',
-        demo: 'NO',
-        silver: 'Yes',
-        golden: 'Yes',
-        platinum: 'Yes',
-        diamond: 'Yes',
-    },
-    {
-        name: 'Adv. Reports such as GST Report and Profit & Loss',
-        demo: 'NO',
-        silver: 'Yes',
-        golden: 'Yes',
-        platinum: 'Yes',
-        diamond: 'Yes',
-    },
-    {
-        name: 'Recover Deleted Invoices (Mobile Only)',
-        demo: 'NO',
-        silver: 'Yes',
-        golden: 'Yes',
-        platinum: 'Yes',
-        diamond: 'Yes',
-    },
-    {
-        name: 'Share Premium Bussiness Card (Android)',
-        demo: 'NO',
-        silver: 'Yes',
-        golden: 'Yes',
-        platinum: 'Yes',
-        diamond: 'Yes',
-    },
-]
+
 
 const about = [
     {
-       
-        img: 'img/bg-2.png',
+
+        img: 'img/tax.png',
         about: 'What is Lorem Ipsum?',
         para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
     },
     {
-       
-        img: 'img/bg-2.png',
+
+        img: 'img/tax.png',
         about: 'What is Lorem Ipsum?',
         para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
     },
     {
-      
-        img: 'img/bg-2.png',
+
+        img: 'img/tax.png',
         about: 'What is Lorem Ipsum?',
         para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
     },
@@ -207,14 +102,17 @@ function Home() {
                 </Container>
             </section>
 
-            {/* <section className="about-section" id="about">
+            <section className="about-section px-md-5 mt-5 pb-5" id="about">
                 <Container fluid>
                     <Row>
                         {about.map((item) =>
-                            <Col md={4}>
+                            <Col md={4} className="mt-md-0 mt-5">
                                 <div className="single-about text-center">
-                                  
-                                    <img src={item.img} alt="" />
+                                    <div className='about-bg-main'>
+                                        <div className='about-bg'>
+                                            <img src={item.img} alt="" />
+                                        </div>
+                                    </div>
 
                                     <h3>{item.about}</h3>
                                     <p>{item.para}</p>
@@ -224,94 +122,77 @@ function Home() {
 
                     </Row>
                 </Container>
-            </section> */}
-
-
-            <section className="details-page details-page-two position-relative" id="about">
-            <h3 className="title">About us</h3>
-                <Container>
-                    <Row>
-                        <Col md={6}>
-                            <img src="img/Untitled3.png" alt="" className="w-100" />
-                        </Col>
-                        <Col md={6}>
-                            <div className="details-inner-section pt-5">
-                                <h4>Contrary to popular belief  </h4>
-                                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                                
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row>
-                       
-                        <Col md={6}>
-                            <div className="details-inner-section pt-5">
-                                <h4>Contrary to popular belief</h4>
-                                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                               
-                            </div>
-                        </Col>
-                        <Col md={6}>
-                            <img src="img/Untitled5.png" alt="" className="w-100" />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={6}>
-                            <img src="img/Untitled4.png" alt="" className="w-100" />
-                        </Col>
-                        <Col md={6}>
-                            <div className="details-inner-section pt-5">
-                                <h4>Contrary to popular belief</h4>
-                                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                                
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row>
-                        
-                        <Col md={6}>
-                            <div className="details-inner-section pt-5">
-                                <h4>Contrary to popular belief</h4>
-                                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                                
-                            </div>
-                        </Col>
-                        <Col md={6}>
-                            <img src="img/Untitled6.png" alt="" className="w-100" />
-                        </Col>
-                    </Row>
-                </Container>
             </section>
 
 
-           
-
-
-            <section className="about-section about-section-two px-md-5 px-0" id="work">
-                <Container fluid>
-                    <h3 className="title">HOW WE WORK</h3>
-                    <Row>
-                        {about.map((item) =>
-                            <Col md={4}>
-                                <div className="single-about text-center">
-                                    <img src={item.img} alt="" />
-
-                                    <h3>{item.about}</h3>
-                                    <p>{item.para}</p>
-                                </div>
-                            </Col>
-                        )}
-                    </Row>
-                </Container>
-            </section>
-
-
-            <section className="details-page position-relative" id="feature">
+            <section className="details-page position-relative  px-md-5 px-0" id="feature">
                 <div className='bg-round-2'> </div>
                 <h3 className="title">App  Features</h3>
-                <Container>
+                <Container fluid>
                     <Row>
-                        <Col md={6} className="order-md-1 order-2">
+                        <Col md={4}>
+                            <div className='form-info'>
+                                <Row className='inquiry-now-title'>
+                                    <Col md={12}>
+                                    <h3>INQUIRY NOW</h3>
+                                    </Col>
+                                </Row>
+                                <Row className="mb-3">
+                                    <Form.Group className="col-md-6" controlId="formGridAddress1">
+                                        <Form.Label>First Name</Form.Label>
+                                        <Form.Control placeholder="Enter First Name" />
+                                    </Form.Group>
+
+                                    <Form.Group className="col-md-6" controlId="formGridAddress2">
+                                        <Form.Label>Last Name</Form.Label>
+                                        <Form.Control placeholder="Enter Last Name" />
+                                    </Form.Group>
+                                </Row>
+                                <Row className="mb-3">
+                                    <Form.Group className="col-md-6" controlId="formGridAddress1">
+                                        <Form.Label>First Name</Form.Label>
+                                        <Form.Control placeholder="Enter First Name" />
+                                    </Form.Group>
+
+                                    <Form.Group className="col-md-6" controlId="formGridAddress2">
+                                        <Form.Label>Last Name</Form.Label>
+                                        <Form.Control placeholder="Enter Last Name" />
+                                    </Form.Group>
+                                </Row>
+                                <Row className="mb-3">
+                                    <Form.Group className="col-md-6" controlId="formGridAddress1">
+                                        <Form.Label>First Name</Form.Label>
+                                        <Form.Control placeholder="Enter First Name" />
+                                    </Form.Group>
+
+                                    <Form.Group className="col-md-6" controlId="formGridAddress2">
+                                        <Form.Label>Last Name</Form.Label>
+                                        <Form.Control placeholder="Enter Last Name" />
+                                    </Form.Group>
+                                </Row>
+                                <Row className="mb-3">
+                                    <Form.Group className="col-md-6" controlId="formGridAddress1">
+                                        <Form.Label>First Name</Form.Label>
+                                        <Form.Control placeholder="Enter First Name" />
+                                    </Form.Group>
+
+                                    <Form.Group className="col-md-6" controlId="formGridAddress2">
+                                        <Form.Label>Last Name</Form.Label>
+                                        <Form.Control placeholder="Enter Last Name" />
+                                    </Form.Group>
+
+                                    <Col md={12} className="form-submit mt-3">
+                                    <button className='bg-submit'>submit</button>
+                                    </Col>
+                                </Row>
+                              
+                            </div>
+                        </Col>
+
+                        <Col md={4}>
+                            <img src="img/about2.png" alt="" className="w-100 pt-5" />
+                        </Col>
+                        <Col md={4}>
                             <div className="details-inner-section">
                                 <h4 className='mb-5'>Contrary to popular belief, Lorem Ipsum is not simply random text</h4>
 
@@ -326,12 +207,260 @@ function Home() {
                                 </button>
                             </div>
                         </Col>
-                        <Col md={6} className="order-md-2 order-1">
-                            <img src="img/about2.png" alt="" className="w-100" />
+                    </Row>
+                </Container>
+            </section>
+
+            <section className='plan-section px-md-5 px-0' id="price">
+                <h3 className="title">Our plan</h3>
+                <Container fluid>
+                    <Row className='mt-5'>
+                        <Col md={3}>
+                            <div className='single-plan-section-main'>
+
+
+                                <div className='single-plan-section'>
+                                    <h3 className='title-plan'>Basic Plan</h3>
+
+                                    <div className='d-flex align-items-center price-discount'>
+                                        <del>₹2000</del>
+                                        <p>40% Discount</p>
+                                    </div>
+
+                                    <div className='total-price'>
+                                        <h3>₹100<span>/mo</span></h3>
+                                        <button>Add to Cart</button>
+                                        <h5>₹ 133.33 /mo after 31 august</h5>
+                                    </div>
+
+                                    <div className='see-features'>
+                                        <h4>See all Features</h4>
+
+
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Only Billing</b>&nbsp;Uses
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>2 Staff</b>&nbsp;User
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Android, IOS & Web</b>&nbsp;Access
+                                        </h5>
+                                        <h5 className='d-flex align-items-center'>
+                                            <span className='mr-1'><img src="img/cross.svg" alt="" /></span>
+                                            Generate E-Way Bill
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <span className='mr-1'><img src="img/cross.svg" alt="" /></span>
+                                            Generate E-Invoicing
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <span className='mr-1'><img src="img/cross.svg" alt="" /></span>
+                                            Generate and Print Barcode
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <span className='mr-1'><img src="img/cross.svg" alt="" /></span>
+                                            SMS Marketing
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Call & Chat</b>&nbsp;Support
+                                        </h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col md={3}>
+                            <div className='single-plan-section-main'>
+                                <div className='single-plan-section'>
+                                    <h3 className='title-plan'>Standard Plan</h3>
+
+                                    <div className='d-flex align-items-center price-discount'>
+                                        <del>₹3000</del>
+                                        <p>40% Discount</p>
+                                    </div>
+
+                                    <div className='total-price'>
+                                        <h3>₹150<span>/mo</span></h3>
+                                        <button>Add to Cart</button>
+                                        <h5>₹ 200 /mo after 31 august</h5>
+                                    </div>
+
+                                    <div className='see-features'>
+                                        <h4>See all Features</h4>
+
+
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Bill and Inventory</b>&nbsp;Uses
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>3 Staff</b>&nbsp;User
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Android, IOS & Web</b>&nbsp;Access
+                                        </h5>
+                                        <h5 className='d-flex align-items-center'>
+                                            <span className='mr-1'><img src="img/cross.svg" alt="" /></span>
+                                            Generate E-Way Bill
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <span className='mr-1'><img src="img/cross.svg" alt="" /></span>
+                                            Generate E-Invoicing
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <span className='mr-1'><img src="img/cross.svg" alt="" /></span>
+                                            Generate and Print Barcode
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <span className='mr-1'><img src="img/right.svg" alt="" /></span>
+                                            500 SMS (Per Year)
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Call & Chat</b>&nbsp;Support
+                                        </h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col md={3}>
+                            <div className='single-plan-section-main single-plan-section-main-populer'>
+                                <div className='most-popular'>
+                                    <h3>Most Popular</h3>
+                                </div>
+                                <div className='single-plan-section'>
+                                    <h3 className='title-plan'>Premium Plan</h3>
+
+                                    <div className='d-flex align-items-center price-discount'>
+                                        <del>₹5000</del>
+                                        <p>40% Discount</p>
+                                    </div>
+
+                                    <div className='total-price'>
+                                        <h3>₹250<span>/mo</span></h3>
+                                        <button>Add to Cart</button>
+                                        <h5>₹ 333.33 /mo after 31 august</h5>
+                                    </div>
+
+                                    <div className='see-features'>
+                                        <h4>See all Features</h4>
+
+
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Bill and Inventory</b>&nbsp;Uses
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>3 Staff</b>&nbsp;User
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Android, IOS & Web</b>&nbsp;Access
+                                        </h5>
+                                        <h5 className='d-flex align-items-center'>
+                                            <span className='mr-1'><img src="img/right.svg" alt="" /></span>
+                                            Generate E-Way Bill
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <span className='mr-1'><img src="img/cross.svg" alt="" /></span>
+                                            Generate E-Invoicing
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <span className='mr-1'><img src="img/right.svg" alt="" /></span>
+                                            Generate and Print Barcode
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <span className='mr-1'><img src="img/right.svg" alt="" /></span>
+                                            1000 SMS (Per Year)
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Priority Call & Chat</b>&nbsp;Support
+                                        </h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col md={3}>
+                            <div className='single-plan-section-main'>
+                                <div className='single-plan-section'>
+                                    <h3 className='title-plan'>Enterprise Plan</h3>
+
+                                    <div className='d-flex align-items-center price-discount'>
+                                        <del>₹6000</del>
+                                        <p>40% Discount</p>
+                                    </div>
+
+                                    <div className='total-price'>
+                                        <h3>₹300<span>/mo</span></h3>
+                                        <button>Add to Cart</button>
+                                        <h5>₹ 400 /mo after 31 august</h5>
+                                    </div>
+
+                                    <div className='see-features'>
+                                        <h4>See all Features</h4>
+
+
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Bill and Inventory</b>&nbsp;Uses
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Unlimited</b>&nbsp;User
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Android, IOS & Web</b>&nbsp;Access
+                                        </h5>
+                                        <h5 className='d-flex align-items-center'>
+                                            <span className='mr-1'><img src="img/right.svg" alt="" /></span>
+                                            Generate E-Way Bill
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <span className='mr-1'><img src="img/right.svg" alt="" /></span>
+                                            Generate E-Invoicing (on Request)
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <span className='mr-1'><img src="img/right.svg" alt="" /></span>
+                                            Generate and Print Barcode
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <span className='mr-1'><img src="img/right.svg" alt="" /></span>
+                                            2000 SMS (Per Year)
+                                        </h5>
+                                        <h5 className='d-flex align-itmes-center'>
+                                            <b>Priority Call & Chat</b>&nbsp;Support
+                                        </h5>
+
+                                    </div>
+                                </div>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
             </section>
+
+
+            <section className="about-section about-section-two px-md-5" id="work">
+                <Container fluid>
+                    <h3 className="title">HOW WE WORK</h3>
+                    <Row className='mt-md-5 mt-0'>
+                        {about.map((item) =>
+                            <Col md={4} className="mt-md-0 mt-5">
+                                <div className="single-about text-center">
+                                    <div className='about-bg-main'>
+                                        <div className='about-bg'>
+                                            <img src={item.img} alt="" />
+                                        </div>
+                                    </div>
+
+                                    <h3>{item.about}</h3>
+                                    <p>{item.para}</p>
+                                </div>
+                            </Col>
+                        )}
+                    </Row>
+                </Container>
+            </section>
+
+
+
 
 
             <section className='bg-testiimonial' id="testmonial">
@@ -357,7 +486,7 @@ function Home() {
             </section>
 
 
-            <section className='plan-section' id="price">
+            {/* <section className='plan-section' id="price">
                 <h3 className="title">Our Plan</h3>
                 <Container fluid className='p-0'>
 
@@ -404,7 +533,9 @@ function Home() {
                     </div>
 
                 </Container>
-            </section>
+            </section> */}
+
+
 
             <section className="details-page position-relative" >
                 <div className='bg-round'> </div>
